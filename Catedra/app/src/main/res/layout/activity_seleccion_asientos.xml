@@ -1,0 +1,86 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView android:id="@+id/tv_resumen_pelicula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Película: [Nombre de la peli] - [2D/3D] ($[Costo])"/>
+    <TextView android:id="@+id/tv_resumen_sala"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sala: 1 (Se genera aleatoriamente)"/>
+    <TextView android:id="@+id/tv_resumen_hora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hora: [Hora elegida]"/>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginVertical="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="PANTALLA"
+        android:gravity="center"
+        android:background="#333333"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/grid_asientos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:columnCount="10" app:rowCount="6"     app:orientation="horizontal"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@android:color/darker_gray" android:layout_marginVertical="16dp"/>
+
+    <TextView android:id="@+id/tv_asientos_elegidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Asientos elegidos: Ninguno"/>
+
+    <TextView android:id="@+id/tv_total_pagar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/design_default_color_primary"
+        android:text="Total a pagar: $0.00"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button android:id="@+id/btn_cambiar_pelicula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cambiar Película"
+            android:layout_marginEnd="8dp"/>
+
+        <Button android:id="@+id/btn_anadir_golosinas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Añadir Golosinas"/>
+
+        <Button android:id="@+id/btn_confirmar_seleccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmar Selección"
+            android:enabled="false"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+</LinearLayout>

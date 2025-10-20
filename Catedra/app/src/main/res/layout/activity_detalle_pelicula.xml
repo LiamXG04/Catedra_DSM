@@ -1,0 +1,109 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorNeutral3"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="6dp"
+            android:text="Título de la Película"  /> <TextView
+        android:id="@+id/txtGenero"
+        style="@style/DetalleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Género: Acción"/>
+
+        <TextView
+            android:id="@+id/txtDuracion"
+            style="@style/DetalleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Duración: 120 min"/>
+
+        <TextView
+            android:id="@+id/txtClasificacion"
+            style="@style/DetalleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clasificación: PG-13"/>
+
+        <TextView
+            android:id="@+id/txtEstreno"
+            style="@style/DetalleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estreno: 15/05/2024"/>
+
+        <TextView
+            android:id="@+id/txtReparto"
+            style="@style/DetalleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reparto: Nombre Actores"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Horarios disponibles:"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CinePlus Plaza Central: 12:00 | 3:00 | 6:30"
+                android:textColor="@color/black"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CinePlus Norte: 1:00 | 4:15 | 7:00"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/btnVolver"
+                android:text="Volver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:backgroundTint="@color/colorNeutral1"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/btnAsientos"
+                android:text="Seleccionar Asientos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
