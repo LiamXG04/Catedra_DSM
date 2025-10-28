@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.catedra_dsm">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="CinePlus"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CinePlus">
+
+        <!-- Pantalla principal al iniciar la app -->
+        <activity android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Otras pantallas -->
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".DetallePeliculaActivity" />
+        <activity android:name=".SeleccionAsientosActivity" />
+        <activity android:name=".GolosinasActivity" />
+        <activity android:name=".CarritoActivity" />
+
+    </application>
+</manifest>

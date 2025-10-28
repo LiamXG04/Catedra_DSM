@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorNeutral2"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".view.LoginActivity">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/cine"
+        android:contentDescription="Logo CinePlus"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido a CinePlus"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium" />
+    <EditText
+    android:id="@+id/txtEmail"
+    android:hint="Correo electrónico"
+    android:inputType="textEmailAddress"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:backgroundTint="@color/colorPrimary"/>
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:text="Iniciar sesión"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/colorPrimary" />
+</LinearLayout>

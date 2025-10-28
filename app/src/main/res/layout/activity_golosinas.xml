@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorNeutral3"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_header_golosinas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menú de Golosinas"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_marginBottom="12dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/candy_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_header_golosinas"
+        android:layout_above="@id/bottom_container"
+        android:paddingBottom="8dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar_golosinas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_golosinas_subtotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subtotal: $0.00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btn_continuar_a_pago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continuar a Pago"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:enabled="false"
+            android:layout_marginBottom="8dp"/>
+    </LinearLayout>
+</RelativeLayout>

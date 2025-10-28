@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Catedra_DSM</string>
+    <style name="Theme.CinePlus" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+    </style>
+</resources>
