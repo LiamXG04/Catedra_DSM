@@ -7,4 +7,8 @@
     <color name="colorNeutral3">#E5CBB4</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="seat_available">#2E7D32</color>
+    <color name="seat_selected">#1976D2</color>
+    <color name="seat_sold">#9E9E9E</color>
+    <color name="seat_locked">#F57C00</color>
 </resources>

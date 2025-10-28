@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Catedra_DSM</string>
+    <string name="error_carga_datos" />
+    <string name="descripcion_poster_pelicula" />
+
     <style name="Theme.CinePlus" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorSecondary">@color/colorSecondary</item>

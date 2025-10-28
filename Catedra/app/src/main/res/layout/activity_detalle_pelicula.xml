@@ -1,109 +1,145 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorNeutral3"
-    android:padding="16dp">
+    tools:context=".view.DetallePeliculaActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <!-- Contenido principal desplazable -->
+    <ScrollView
+        android:id="@+id/content_scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/txtTitulo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimary"
-            android:layout_marginBottom="6dp"
-            android:text="Título de la Película"  /> <TextView
-        android:id="@+id/txtGenero"
-        style="@style/DetalleText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Género: Acción"/>
-
-        <TextView
-            android:id="@+id/txtDuracion"
-            style="@style/DetalleText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Duración: 120 min"/>
-
-        <TextView
-            android:id="@+id/txtClasificacion"
-            style="@style/DetalleText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Clasificación: PG-13"/>
-
-        <TextView
-            android:id="@+id/txtEstreno"
-            style="@style/DetalleText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Estreno: 15/05/2024"/>
-
-        <TextView
-            android:id="@+id/txtReparto"
-            style="@style/DetalleText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Reparto: Nombre Actores"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Horarios disponibles:"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginTop="12dp"
-            android:textColor="@color/colorPrimary"/>
+        android:layout_height="0dp"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp">
+            android:paddingBottom="80dp">
 
+            <!-- ImageView para el póster -->
+            <ImageView
+                android:id="@+id/imgPoster"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/descripcion_poster_pelicula"
+                android:layout_marginBottom="16dp"
+                android:background="@color/colorNeutral1"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <!-- Título -->
             <TextView
+                android:id="@+id/txtTitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CinePlus Plaza Central: 12:00 | 3:00 | 6:30"
-                android:textColor="@color/black"
-                android:layout_marginBottom="4dp"/>
+                android:layout_marginBottom="6dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:text="Título de la Película" />
 
+            <!-- Sinopsis -->
             <TextView
+                android:id="@+id/txtSinopsis"
+                style="@style/DetalleText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CinePlus Norte: 1:00 | 4:15 | 7:00"
-                android:textColor="@color/black"/>
-        </LinearLayout>
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                tools:text="Aquí va la sinopsis de la película." />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
+            <!-- Género -->
+            <TextView
+                android:id="@+id/txtGenero"
+                style="@style/DetalleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Género: Acción" />
+
+            <!-- Duración -->
+            <TextView
+                android:id="@+id/txtDuracion"
+                style="@style/DetalleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Duración: 120 min" />
+
+            <!-- Clasificación -->
+            <TextView
+                android:id="@+id/txtClasificacion"
+                style="@style/DetalleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Clasificación: PG-13" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ✅ Barra inferior fija -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="?attr/colorSurface"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="20dp">
+            android:layout_weight="1"
+            android:text="Volver" />
 
-            <Button
-                android:id="@+id/btnVolver"
-                android:text="Volver"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:backgroundTint="@color/colorNeutral1"
-                android:textColor="@color/black"/>
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="0dp" />
 
-            <Button
-                android:id="@+id/btnAsientos"
-                android:text="Seleccionar Asientos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorPrimary"
-                android:textColor="@color/white"/>
-        </LinearLayout>
+        <Button
+            android:id="@+id/btnAsientos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Elegir asientos" />
     </LinearLayout>
-</ScrollView>
+
+    <!-- Barra de progreso -->
+    <ProgressBar
+        android:id="@+id/progressBar_detalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <!-- Texto de error -->
+    <TextView
+        android:id="@+id/tv_error_detalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/error_carga_datos"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

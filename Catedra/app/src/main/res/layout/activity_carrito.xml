@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,15 +8,18 @@
     android:background="@color/colorNeutral2">
 
     <TextView
-        android:id="@+id/txtResumenFinal"
+        android:id="@+id/tv_resumen_final"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:textColor="@color/colorPrimary"
-        android:gravity="center"
-        android:layout_marginBottom="20dp"/>
+        android:gravity="start"
+        android:layout_marginBottom="20dp"
+        android:padding="16dp"
+        android:text="Datos de la factura se cargarán aquí..."/>
 
     <Button
+        android:id="@+id/btn_confirmar_y_pagar"
         android:text="Confirmar y Pagar"
         android:backgroundTint="@color/colorPrimary"
         android:textColor="@color/white"
