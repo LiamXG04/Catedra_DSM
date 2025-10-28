@@ -1,8 +1,8 @@
 # Catedra
 
-Alfredo Steven Aguilera Salazar	AS240144
-William Adonay Bonilla Perez	BP220765
-Christian Javier Rosales Palacios	RP241102
+# Alfredo Steven Aguilera Salazar	AS240144
+# William Adonay Bonilla Perez	BP220765
+# Christian Javier Rosales Palacios	RP241102
 
 # CinePlus – Sistema de gestión digital para cines
 
